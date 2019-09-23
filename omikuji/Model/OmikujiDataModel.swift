@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Omikuji {
+struct OmikujiDataModel {
     
     private(set) var result: String
     private var cards: [String]

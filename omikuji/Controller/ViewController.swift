@@ -12,7 +12,7 @@ import UIKit
 class ViewController: UIViewController {
     
     // おみくじデータをインスタンス化
-    private var omikuji = Omikuji()
+    private var omikuji = OmikujiDataModel()
     
     override func viewDidLoad() {
         
