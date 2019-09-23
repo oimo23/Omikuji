@@ -21,6 +21,9 @@ disabled_rules:
 - trailing_closure # RxSwiftのOnNextでwarningが出るため
 - trailing_whitespace
 - vertical_whitespace
+- explicit_top_level_acl
+- explicit_acl
+- prohibited_interface_builder
 
 # defaultルール以外にopt-inから採用するルール
 opt_in_rules:
@@ -121,8 +124,8 @@ excluded:
 
 # 1行の文字列制限
 line_length:
-- 200   # warning
-- 300   # error
+- 300   # warning
+- 400   # error
 
 # 型の行数制限
 type_body_length:
