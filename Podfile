@@ -7,6 +7,7 @@ target 'omikuji' do
 
   # Pods for omikuji
   pod 'PopupDialog', '~> 1.1'
+  pod 'SwiftLint'
 
   target 'omikujiTests' do
     inherit! :search_paths

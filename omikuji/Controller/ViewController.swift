@@ -6,8 +6,8 @@
 //  Copyright © 2019 yuki fushinuki. All rights reserved.
 //
 
-import UIKit
 import PopupDialog
+import UIKit
 
 class ViewController: UIViewController {
     
@@ -54,4 +54,3 @@ class ViewController: UIViewController {
 
 
 }
-

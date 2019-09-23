@@ -201,6 +201,7 @@
 				C3B7E89D23216AB9008CB558 /* Frameworks */,
 				C3B7E89E23216AB9008CB558 /* Resources */,
 				CC75A322AC3A0248E6E16D57 /* [CP] Embed Pods Frameworks */,
+				C35A16C323295D2B006D73FB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -364,6 +365,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		C35A16C323295D2B006D73FB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Tyif which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\nswiftlint autocorrect --format\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfipe a script or drag a script file from your workspace to insert its path.\n";
 		};
 		CC75A322AC3A0248E6E16D57 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -591,7 +609,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = oimo23.omikuji;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -610,7 +628,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = oimo23.omikuji;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
