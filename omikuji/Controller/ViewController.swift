@@ -36,7 +36,6 @@ class ViewController: UIViewController {
 
         let title = "おみくじ結果"
         let message = omikuji.result
-        // let image = UIImage(named: omikuji.decideOmikujiImage())
 
         // 設定した内容でポップアップダイアログを生成
         let popup = PopupDialog(title: title, message: message)

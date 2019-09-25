@@ -28,19 +28,4 @@ struct OmikujiDataModel {
 
     }
 
-    func decideOmikujiImage() -> String {
-
-        if self.result == "大吉" {
-            return "omikuji_daikichi"
-        } else if self.result == "吉" {
-            return "omikuji_kichi"
-        } else if self.result == "中吉" {
-            return "omikuji_chuukichi"
-        } else if self.result == "末吉" {
-            return "omikuji_suekichi"
-        } else {
-            return "omikuji_kyou"
-        }
-
-    }
 }
