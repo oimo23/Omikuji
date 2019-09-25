@@ -19,9 +19,14 @@ class omikujiTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testOmikujiDataModel() {
+        
+        var omikuji = OmikujiDataModel()
+        
+        omikuji.lottery()
+        
+        XCTAssertNotEqual(omikuji.result, "未抽選", "おみくじ抽選機能テスト")
+        
     }
 
     func testPerformanceExample() {
