@@ -27,27 +27,29 @@ class ViewController: UIViewController {
         omikuji.lottery()
 
         // ポップアップダイアログの中身を更新する
-        updatePopupUI()
+        let updatedPopup: PopupDialog = updatePopupUI()
+        
+        // ダイアログを出す
+        self.present(updatedPopup, animated: true, completion: nil)
 
     }
 
-    // おみくじ結果を更新して表示
-    func updatePopupUI() {
+    // おみくじ結果を更新して返す
+    func updatePopupUI() -> PopupDialog {
 
         let title = "おみくじ結果"
         let message = omikuji.result
 
         // 設定した内容でポップアップダイアログを生成
         let popup = PopupDialog(title: title, message: message)
-
+        
         // ボタンを作成
         let buttonOK = CancelButton(title: "OK") {}
 
         // 作成したボタンを追加
         popup.addButtons([buttonOK])
-
-        // ダイアログを出す
-        self.present(popup, animated: true, completion: nil)
+        
+        return popup
 
     }
 
