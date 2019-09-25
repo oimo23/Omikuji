@@ -28,7 +28,7 @@ class ViewController: UIViewController {
 
         // ポップアップダイアログの中身を更新する
         let updatedPopup: PopupDialog = updatePopupUI()
-        
+
         // ダイアログを出す
         self.present(updatedPopup, animated: true, completion: nil)
 
@@ -42,13 +42,13 @@ class ViewController: UIViewController {
 
         // 設定した内容でポップアップダイアログを生成
         let popup = PopupDialog(title: title, message: message)
-        
+
         // ボタンを作成
         let buttonOK = CancelButton(title: "OK") {}
 
         // 作成したボタンを追加
         popup.addButtons([buttonOK])
-        
+
         return popup
 
     }

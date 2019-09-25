@@ -17,6 +17,7 @@ target 'omikuji' do
   target 'omikujiUITests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'PopupDialog', '~> 1.1'
   end
 
 end
