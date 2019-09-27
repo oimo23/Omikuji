@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct OmikujiPresenter {
+final class OmikujiPresenter {
 
     private weak var view: ViewManager?
     private var omikuji: OmikujiDataModel?
