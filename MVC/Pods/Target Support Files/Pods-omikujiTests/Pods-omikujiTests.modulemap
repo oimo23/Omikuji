@@ -1,0 +1,6 @@
+framework module Pods_omikujiTests {
+  umbrella header "Pods-omikujiTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
