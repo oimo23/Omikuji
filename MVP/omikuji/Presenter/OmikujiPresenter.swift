@@ -34,7 +34,7 @@ final class OmikujiPresenter {
 
         // Viewを更新
         view?.updateView()
-    
+
     }
 
 }

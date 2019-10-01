@@ -10,6 +10,7 @@
 		1B07B4CA757755E91F02C92B /* Pods_omikuji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3490C4BFE1A8BB361B07772D /* Pods_omikuji.framework */; };
 		A0FF53B42B59789F4F3DE0EC /* Pods_omikujiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CD8285C86147CABFF8FAFE /* Pods_omikujiUITests.framework */; };
 		B70F20668F0D80DEB9CE64F7 /* Pods_omikujiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F35626E095B5FD0081502583 /* Pods_omikujiTests.framework */; };
+		C32ECC6D2343BD86002EC66E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32ECC6C2343BD86002EC66E /* R.generated.swift */; };
 		C35A16C02326B431006D73FB /* OmikujiDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35A16BF2326B431006D73FB /* OmikujiDataModel.swift */; };
 		C3B7E8A423216AB9008CB558 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B7E8A323216AB9008CB558 /* AppDelegate.swift */; };
 		C3B7E8A623216AB9008CB558 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B7E8A523216AB9008CB558 /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 		3490C4BFE1A8BB361B07772D /* Pods_omikuji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_omikuji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		378D3535E9A8574C47B9E584 /* Pods-omikujiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omikujiUITests.debug.xcconfig"; path = "Target Support Files/Pods-omikujiUITests/Pods-omikujiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F521A6FA5D9D9932BCAEEC4 /* Pods-omikuji.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omikuji.debug.xcconfig"; path = "Target Support Files/Pods-omikuji/Pods-omikuji.debug.xcconfig"; sourceTree = "<group>"; };
+		C32ECC6C2343BD86002EC66E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		C35A16BF2326B431006D73FB /* OmikujiDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmikujiDataModel.swift; sourceTree = "<group>"; };
 		C3B7E8A023216AB9008CB558 /* omikuji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = omikuji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3B7E8A323216AB9008CB558 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				C3B7E8D223216AD2008CB558 /* Controller */,
 				C3B7E8D123216ACC008CB558 /* View */,
 				C3B7E8A323216AB9008CB558 /* AppDelegate.swift */,
+				C32ECC6C2343BD86002EC66E /* R.generated.swift */,
 				C3B7E8AA23216ABC008CB558 /* Assets.xcassets */,
 				C3B7E8AF23216ABC008CB558 /* Info.plist */,
 			);
@@ -197,6 +200,7 @@
 			buildConfigurationList = C3B7E8C823216ABC008CB558 /* Build configuration list for PBXNativeTarget "omikuji" */;
 			buildPhases = (
 				7DB8A05C32BA9DD9672B4DEE /* [CP] Check Pods Manifest.lock */,
+				C32ECC692343BC32002EC66E /* ShellScript */,
 				C3B7E89C23216AB9008CB558 /* Sources */,
 				C3B7E89D23216AB9008CB558 /* Frameworks */,
 				C3B7E89E23216AB9008CB558 /* Resources */,
@@ -373,17 +377,34 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-omikujiUITests/Pods-omikujiUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-omikujiUITests/Pods-omikujiUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-omikuji/Pods-omikuji-frameworks.sh\"\n\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-omikujiUITests/Pods-omikujiUITests-frameworks.sh\"\n";
+		};
+		C32ECC692343BC32002EC66E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
 		};
 		C35A16C323295D2B006D73FB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -409,9 +430,6 @@
 			);
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-omikuji/Pods-omikuji-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			inputPaths = (
-				"$(SRCROOT)/newInputFile",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -454,6 +472,7 @@
 				C35A16C02326B431006D73FB /* OmikujiDataModel.swift in Sources */,
 				C3B7E8A623216AB9008CB558 /* ViewController.swift in Sources */,
 				C3B7E8A423216AB9008CB558 /* AppDelegate.swift in Sources */,
+				C32ECC6D2343BD86002EC66E /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
